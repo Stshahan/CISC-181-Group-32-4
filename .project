@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>CISC-181-Group-32-4-master</name>
 	<comment></comment>
 	<projects>
@@ -19,5 +20,34 @@
 	<natures>
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
+=======
+<<<<<<< HEAD
+	<name>SudokuBLL</name>
+=======
+<<<<<<< HEAD
+	<name>Sudokubllooooo</name>
+=======
+	<name>SudokuBLL</name>
+>>>>>>> branch 'master' of https://github.com/Stshahan/CISC-181-Group-32-4
+>>>>>>> branch 'master' of https://github.com/Stshahan/CISC-181-Group-32-4.git
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+>>>>>>> branch 'master' of https://github.com/Stshahan/CISC-181-Group-32-4
 	</natures>
 </projectDescription>

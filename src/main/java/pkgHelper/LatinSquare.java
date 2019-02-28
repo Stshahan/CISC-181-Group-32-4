@@ -18,7 +18,7 @@ public class LatinSquare {
  * 	
  */
 	
-	
+	// test git
 	
 	private int[][] LatinSquare;
 

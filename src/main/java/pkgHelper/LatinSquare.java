@@ -18,7 +18,7 @@ public class LatinSquare {
  * 	
  */
 	
-	
+	// chris tiso
 	
 	private int[][] LatinSquare;
 

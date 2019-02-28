@@ -18,7 +18,11 @@ public class LatinSquare {
  * 	
  */
 	
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> branch 'master' of https://github.com/Stshahan/CISC-181-Group-32-4.git
 	
 	private int[][] LatinSquare;
 

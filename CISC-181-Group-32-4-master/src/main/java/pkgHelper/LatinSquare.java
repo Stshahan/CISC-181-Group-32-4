@@ -23,7 +23,7 @@ public class LatinSquare {
 	private int[][] LatinSquare;
 
 	public LatinSquare() {
-		//Constructor for LatinSquare
+		//Constructor for LatinSquare (no arg)
 		super();
 			
 	}
@@ -40,7 +40,7 @@ public class LatinSquare {
 		Puz.getLatinSquare();
 		Puz.ContainsZero();
 		
-		
+		//But if it's not a LS...?
 			
 		return true;
 	}
@@ -59,7 +59,7 @@ public class LatinSquare {
 	
 	
 	public static boolean doesElementExist(int[] arr, int iValue)
-
+	//Searches for a specific element in the array(iValue) and returns true if it exists and false if it doesn't
 	{
 	
 	for(int x = 0; x < arr.length; x++) 
@@ -131,11 +131,19 @@ public class LatinSquare {
 	
 	public static boolean hasAllValues(int[] arr1, int[] arr2) {
 		// compares values from two arrays (Row and Column)
-
-		boolean hasAllValues = true;
+		
+			
+		
+		
+		boolean hasAllValues = true;//assume true, unless proven otherwise
+		
+		if (arr1.length != arr2.length) {
+			hasAllValues = false;
+		}
+		else {
 		for (int j = 0; j < arr2.length; j++) {
 
-		boolean bFound = false;
+		boolean bFound = false; //assumes false, unless loops prove otherwise.
 
 		for (int i = 0; i < arr1.length; i++) {
 		if (arr1[i] == arr2[j]) {
@@ -149,9 +157,11 @@ public class LatinSquare {
 		break;
 		}
 		}
+		}
 		return hasAllValues;
 
-		}
-
 		
+	}
 }
+		
+

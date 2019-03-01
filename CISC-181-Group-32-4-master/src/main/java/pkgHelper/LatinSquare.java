@@ -137,7 +137,7 @@ public class LatinSquare {
 		
 		boolean hasAllValues = true;//assume true, unless proven otherwise
 		
-		if (arr1.length != arr2.length) {
+		if (arr1.length != arr2.length) {//tests the length of the arrays.
 			hasAllValues = false;
 		}
 		else {

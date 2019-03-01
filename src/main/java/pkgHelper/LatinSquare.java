@@ -38,18 +38,32 @@ public class LatinSquare {
 		super();
 		LatinSquare = puzzle;
 	}
-	
+	/*
+	 * This is not complete. I was just testing stuff out. 
+	 * 
+	 * 
 	public boolean isLatinSquare() {
+		
+		int[][] puzzle = {{1,2,3,4,},{2,3,4,1},{3,4,1,2},{4,3,2,1}};
+		
 		LatinSquare Puz = new LatinSquare();
-		Puz.getLatinSquare();
+		Puz.setLatinSquare(puzzle);
 		Puz.ContainsZero();
 		
+		for (int i=0; i < puzzle.length; i++)
+		{
+		int [] row = Puz.getRow(i,puzzle);
+		int [] column = Puz.getColumn(i, puzzle);
+		
+		Puz.hasAllValues(column, row);
+		
+		}
 		
 			
 		return true;
 	}
 	
-	
+	*/
 
 	public int[][] getLatinSquare() {
 		// Method returns LatinSquare array

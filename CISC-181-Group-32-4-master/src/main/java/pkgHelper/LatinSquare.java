@@ -15,12 +15,12 @@ public class LatinSquare {
  * setLatinSquare Complete
  * getLatinSquare Complete
  * 
- * 	
+ * 	lalalalalalal
  */
 	
 	// test git
 	
-	private int[][] LatinSquare;
+	private int[][] LatinSquare; // instance variable
 
 	public LatinSquare() {
 		//Constructor for LatinSquare (no arg)

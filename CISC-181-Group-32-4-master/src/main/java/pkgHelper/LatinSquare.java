@@ -37,10 +37,14 @@ public class LatinSquare {
 	
 	public boolean isLatinSquare() {
 		LatinSquare Puz = new LatinSquare();
+		// need to separate into rows and columns
 		Puz.getLatinSquare();
 		Puz.ContainsZero();
 		
-		//But if it's not a LS...?
+		
+		
+		
+		//But if it's not a LS...? must call hasDuplicates
 			
 		return true;
 	}
@@ -104,19 +108,19 @@ public class LatinSquare {
 	return false;
 	}
 	
-	int[] getColumn(int Column, int[][] testArray)
+	public int[] getColumn(int iColumn)
 	{
 	// Method returns LatinSquare Column
-		int[] columnArray = Arrays.copyOf(testArray[Column], testArray.length);
-	for (int Row=0; Row < testArray[Column].length; Row++) {
-			columnArray[Row] = testArray[Row][Column];
+		int[] columnArray = Arrays.copyOf(LatinSquare[][iColumn], LatinSquare.length);
+	for (int Row=0; Row < LatinSquare[iColumn].length; Row++) {
+			columnArray[Row] = LatinSquare[Row][iColumn];
 		}
 
 		return columnArray;
 	
 	}	
 
-	int[] getRow(int Row, int[][] testArray)
+	public int[] getRow(int Row, int[][] testArray)
 	{
 	// Method returns LatinSquare Row
 	int [] rowArray = Arrays.copyOf(testArray[Row], testArray.length);

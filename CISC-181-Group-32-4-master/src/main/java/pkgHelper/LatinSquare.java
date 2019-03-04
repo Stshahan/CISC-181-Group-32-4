@@ -15,7 +15,7 @@ public class LatinSquare {
  * setLatinSquare Complete
  * getLatinSquare Complete
  * 
- * 	lalalalalalal
+ * 	
  */
 	
 	// test git
@@ -108,31 +108,28 @@ public class LatinSquare {
 	return false;
 	}
 	
-	public int[] getColumn(int iColumn)
+	public int[] getColumn(int iCol)
 	{
-	
-		int[][] lSquare = getLatinSquare();
-		int[]theColumn = lSquare [][iColumn];
-	for (int Row=0; Row < LatinSquare[iColumn].length; Row++) {
-			columnArray[Row] = LatinSquare[Row][iColumn];
+	// Method returns LatinSquare Column
+		int[] columnArray = new int [this.LatinSquare.length];
+	for (int Row=0; Row < this.LatinSquare.length; Row++) {
+			columnArray[Row] = LatinSquare[Row][iCol];
 		}
-
 		return columnArray;
-	
-	}	
+		}	
 
-	public int[] getRow(int Row, int[][] testArray)
+	public int[] getRow(int iRow)
 	{
 	// Method returns LatinSquare Row
-	int [] rowArray = Arrays.copyOf(testArray[Row], testArray.length);
-	for (int Column=0; Column < testArray[Row].length; Column++) {
-			rowArray[Column] = testArray[Row][Column];
-		}
-
+		int [] rowArray = new int [this.LatinSquare.length];
+	
+		rowArray = this.LatinSquare[iRow];
 	
 		return rowArray;
 	
 	}	
+	
+	
 	
 	public static boolean hasAllValues(int[] arr1, int[] arr2) {
 		// compares values from two arrays (Row and Column)

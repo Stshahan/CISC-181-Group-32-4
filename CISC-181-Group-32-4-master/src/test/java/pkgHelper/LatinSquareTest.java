@@ -7,6 +7,8 @@ import java.util.Arrays;
 import org.junit.Test;
 /*Tests completed:
   doesElementExistTests 1,2
+  hasDuplicates
+  hasAllValues
  */
 
 public class LatinSquareTest {
@@ -70,7 +72,16 @@ public class LatinSquareTest {
 		
 	}
 	
-	
+	@Test
+	//Added by Ryan
+	public void getColumn_Test1() {
+		int testCol = 2;
+		LatinSquare testLatinSquare = new LatinSquare({{0,1,2},{1,2,0},{2,0,1}});
+		int[] expectedArray = {2,2,1};
+		int [] actualArray = testLatinSquare.getColumn(testCol);
+		
+		assertEquals(expectedArray,actualArray);
+	}
 	
 } 
 

@@ -10,20 +10,18 @@ public class LatinSquare {
  * doesElementExist Complete
  * getColumn Complete
  * getRow Complete
- * hasAllValues Complete
+ * hasAllValues Complete 
  * hasDuplicates Complete
  * setLatinSquare Complete
  * getLatinSquare Complete
- * 
- * 	
+ * isLatinSquareComplete
  */
 	
-	// test git
 	
-	private int[][] LatinSquare;
+	private int[][] LatinSquare; // instance variable
 
 	public LatinSquare() {
-		//Constructor for LatinSquare
+		//Constructor for LatinSquare (no arg)
 		super();
 			
 	}
@@ -32,37 +30,56 @@ public class LatinSquare {
 	public LatinSquare(int[][] puzzle) {
 		//1 arg Constructor for LatinSquare
 		super();
-		LatinSquare = puzzle;
-	}
-	/*
-	 * This is not complete. I was just testing stuff out. 
-	 * 
-	 * 
-	public boolean isLatinSquare() {
-		
-		int[][] puzzle = {{1,2,3,4,},{2,3,4,1},{3,4,1,2},{4,3,2,1}};
-		
-		LatinSquare Puz = new LatinSquare();
-		Puz.setLatinSquare(puzzle);
-		Puz.ContainsZero();
-		
-		for (int i=0; i < puzzle.length; i++)
-		{
-		int [] row = Puz.getRow(i,puzzle);
-		int [] column = Puz.getColumn(i, puzzle);
-		
-		Puz.hasAllValues(column, row);
-		
-		}
-		
-			
-		return true;
+		this.LatinSquare = puzzle;
 	}
 	
-	*/
+	public boolean isLatinSquare() {
+		
+		boolean isLatinSquare = true;
+		
+		
+		//Checks rows and Columns for Duplicates
+		for (int i = 0; i < this.LatinSquare.length; i++)
+		{
+			if (hasDuplicates(getRow(i)))
+			{ 
+				return false;
+			
+			}
+			
+			if (hasDuplicates(getColumn(i)))
+			{ 
+				return false;
+			
+			}
+			
+			
+		}
+		//returns false if rows do not contain all values
+		for (int i = 1; i < LatinSquare.length; i++) {
+			
+			if(!hasAllValues(getRow(0),getRow(i)))
+			{
+			return false;
+		}
+			if(!hasAllValues(getColumn(0),getColumn(i)))
+			{
+			return false;
+		}
+		
+		
+		
+		
+		
+		
+		}
+		return isLatinSquare;
+	}
+	
+	
 
 	public int[][] getLatinSquare() {
-		// Method returns LatinSquare array
+		// Method returns LatinSquare 2 dimensional array
 		return LatinSquare;
 	}
 
@@ -73,7 +90,7 @@ public class LatinSquare {
 	
 	
 	public static boolean doesElementExist(int[] arr, int iValue)
-
+	//Searches for a specific element in the array(iValue) and returns true if it exists and false if it doesn't
 	{
 	
 	for(int x = 0; x < arr.length; x++) 
@@ -118,26 +135,24 @@ public class LatinSquare {
 	return false;
 	}
 	
-	int[] getColumn(int Column, int[][] testArray)
+	
+	public int[] getColumn(int iCol)
 	{
 	// Method returns LatinSquare Column
-		int[] columnArray = Arrays.copyOf(testArray[Column], testArray.length);
-	for (int Row=0; Row < testArray[Column].length; Row++) {
-			columnArray[Row] = testArray[Row][Column];
+		int[] columnArray = new int [this.LatinSquare.length];
+	for (int Row=0; Row < this.LatinSquare.length; Row++) {
+			columnArray[Row] = LatinSquare[Row][iCol];
 		}
-
 		return columnArray;
-	
-	}	
+		}	
 
-	int[] getRow(int Row, int[][] testArray)
+	
+	public int[] getRow(int iRow)
 	{
 	// Method returns LatinSquare Row
-	int [] rowArray = Arrays.copyOf(testArray[Row], testArray.length);
-	for (int Column=0; Column < testArray[Row].length; Column++) {
-			rowArray[Column] = testArray[Row][Column];
-		}
-
+		int [] rowArray = new int [this.LatinSquare.length];
+	
+		rowArray = this.LatinSquare[iRow];
 	
 		return rowArray;
 	
@@ -145,11 +160,19 @@ public class LatinSquare {
 	
 	public static boolean hasAllValues(int[] arr1, int[] arr2) {
 		// compares values from two arrays (Row and Column)
-
-		boolean hasAllValues = true;
+		
+			
+		
+		
+		boolean hasAllValues = true;//assume true, unless proven otherwise
+		
+		if (arr1.length != arr2.length) {//tests the length of the arrays.
+			hasAllValues = false;
+		}
+		else {
 		for (int j = 0; j < arr2.length; j++) {
 
-		boolean bFound = false;
+		boolean bFound = false; //assumes false, unless loops prove otherwise.
 
 		for (int i = 0; i < arr1.length; i++) {
 		if (arr1[i] == arr2[j]) {
@@ -163,9 +186,11 @@ public class LatinSquare {
 		break;
 		}
 		}
+		}
 		return hasAllValues;
 
-		}
-
 		
+	}
+	
 }
+		

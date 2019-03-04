@@ -46,6 +46,95 @@ public class LatinSquareTest {
 		assertEquals(bExpected, bActual);
 	}
 	
+	@Test 
+	public void hasAllValues_Test1() {
+		int [] tarr1 = {1,2,3,4,5};
+		int [] tarr2 = {1,2,3,4,5};
+		boolean expectedBool = true;
+		boolean actualBool = LatinSquare.hasAllValues(tarr1, tarr2);
+		
+		assertEquals(expectedBool,actualBool);
+		
+	}
+	@Test 
+	public void hasAllValues_Test2() {
+		int [] tarr1 = {1,2,3,4};
+		int [] tarr2 = {1,2,3,6,5};
+		boolean expectedBool = false;
+		boolean actualBool = LatinSquare.hasAllValues(tarr1, tarr2);
+		
+		assertEquals(expectedBool,actualBool);
+		
+	}
+	@Test
+	public void getColumn_Test1() {
+		
+		int testCol = 2;
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+		int [] expectedArray = {3,1,2};
+		int [] actualArray = testLatinSquare.getColumn(testCol);
+			
+		boolean expectedBool = true;
+		boolean actualBool = Arrays.equals(expectedArray, actualArray) ;
+		
+		assertEquals(expectedBool,actualBool);
+		
+	
+	}
+	@Test
+	public void getColumn_Test2() {
+		
+		int testCol = 2;
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+		int [] expectedArray = {3,1,2};
+		int [] actualArray = testLatinSquare.getColumn(testCol);
+			
+		boolean expectedBool = true;
+		boolean actualBool = Arrays.equals(expectedArray, actualArray) ;
+		
+		assertEquals(expectedBool,actualBool);
+		
+	
+	}
+	
+	
+	@Test  
+	public void getRow_Test1() {
+		
+		int testRow = 2;
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+		int [] expectedArray = {3,2,1};
+		int [] actualArray = testLatinSquare.getRow(testRow);
+				
+		boolean expectedBool = false;
+		boolean actualBool = Arrays.equals(expectedArray, actualArray) ;
+		
+		assertEquals(expectedBool,actualBool);
+	}
+	@Test  
+	public void getRow_Test2() {
+		
+		int testRow = 2;
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+		int [] expectedArray = {3,1,2};
+		int [] actualArray = testLatinSquare.getRow(testRow);
+				
+		boolean expectedBool = true;
+		boolean actualBool = Arrays.equals(expectedArray, actualArray) ;
+		
+		assertEquals(expectedBool,actualBool);
+	}
 	
 	
 }
+	
+
+

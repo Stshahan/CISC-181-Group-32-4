@@ -133,8 +133,35 @@ public class LatinSquareTest {
 		assertEquals(expectedBool,actualBool);
 	}
 	
+	@Test  
+	public void isLatinSquare_Test() {
+		
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+						
+		
+		boolean expectedBool = true;
+		boolean actualBool = testLatinSquare.isLatinSquare();
+		
+		
+		assertEquals(expectedBool,actualBool);
+	
+}
+	@Test  
+	public void isLatinSquare_Test2() {
+		
+		int [][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(puzzle);
+		
+		boolean expectedBool = false;
+		boolean actualBool = testLatinSquare.isLatinSquare();
+		
+		
+		assertEquals(expectedBool,actualBool);
 	
 }
 	
-
+}
 

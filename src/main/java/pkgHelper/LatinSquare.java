@@ -37,7 +37,7 @@ public class LatinSquare {
 		
 		boolean isLatinSquare = true;
 		
-		
+		{	
 		//Checks rows and Columns for Duplicates
 		for (int i = 0; i < this.LatinSquare.length; i++)
 		{
@@ -47,12 +47,13 @@ public class LatinSquare {
 			
 			}
 			
-			if (hasDuplicates(getColumn(i)))
+		for (int j = 0; j < this.LatinSquare.length; j++)
+			if (hasDuplicates(getColumn(j)))
 			{ 
 				return false;
 			
 			}
-			
+		
 			
 		}
 		//returns false if rows do not contain all values
@@ -62,18 +63,20 @@ public class LatinSquare {
 			{
 			return false;
 		}
-			if(!hasAllValues(getColumn(0),getColumn(i)))
+		}	
+		
+		for (int j = 1; j < LatinSquare.length; j++) {
+				
+			if(!hasAllValues(getColumn(0),getColumn(j)))
 			{
 			return false;
 		}
-		
-		
-		
-		
-		
-		
 		}
+		
+	}
+		
 		return isLatinSquare;
+		
 	}
 	
 	

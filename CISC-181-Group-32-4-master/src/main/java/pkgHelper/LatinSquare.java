@@ -110,8 +110,9 @@ public class LatinSquare {
 	
 	public int[] getColumn(int iColumn)
 	{
-	// Method returns LatinSquare Column
-		int[] columnArray = Arrays.copyOf(LatinSquare[][iColumn], LatinSquare.length);
+	
+		int[][] lSquare = getLatinSquare();
+		int[]theColumn = lSquare [][iColumn];
 	for (int Row=0; Row < LatinSquare[iColumn].length; Row++) {
 			columnArray[Row] = LatinSquare[Row][iColumn];
 		}

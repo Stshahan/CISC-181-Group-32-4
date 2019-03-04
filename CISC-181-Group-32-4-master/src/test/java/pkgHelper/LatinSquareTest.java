@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 /*Tests completed:
- * doesElementExistTests 1,2
+  doesElementExistTests 1,2
  */
 
 public class LatinSquareTest {
@@ -72,6 +72,5 @@ public class LatinSquareTest {
 	
 	
 	
-}
-	
+} 
 

@@ -2,7 +2,7 @@ package pkgHelper;
 
 import static org.junit.Assert.*;
 
-import java.util.Arrays;
+//import java.util.Arrays;
 
 import org.junit.Test;
 /*Tests completed:
@@ -74,14 +74,51 @@ public class LatinSquareTest {
 	
 	@Test
 	//Added by Ryan
-	public void getColumn_Test1() {
+	public void getColumn_Test() {
 		int testCol = 2;
-		LatinSquare testLatinSquare = new LatinSquare({{0,1,2},{1,2,0},{2,0,1}});
-		int[] expectedArray = {2,2,1};
-		int [] actualArray = testLatinSquare.getColumn(testCol);
+		int [][] lS = {{0,1,2},{1,2,0},{2,0,1}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(lS);
+		int[] expectedArray = {2,0,1};
+		int[] actualArray = testLatinSquare.getColumn(testCol);
 		
-		assertEquals(expectedArray,actualArray);
+		equals(expectedArray == actualArray);
 	}
 	
+	@Test
+	public void getRow_Test() {
+		int testRow = 2;
+		int [][] lS = {{0,1,2},{1,2,0},{2,0,1}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(lS);
+		int[] expectedArray = {2,0,1};
+		int[] actualArray = testLatinSquare.getRow(testRow);
+		
+		equals(expectedArray == actualArray);
 } 
-
+	
+	@Test
+	public void isLatinSquare_Test1() {
+		int [][] lS = {{0,1,2},{1,2,0},{2,0,1}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(lS);
+		boolean expectation = true;
+		boolean actual = testLatinSquare.isLatinSquare();
+		
+		assertEquals(expectation, actual);
+		
+	}
+	
+	@Test
+	public void isLatinSquare_Test2() {
+		int [][] lS = {{0,1,4},{1,2,0},{2,0,1}};
+		LatinSquare testLatinSquare = new LatinSquare();
+		testLatinSquare.setLatinSquare(lS);
+		boolean expectation = false;
+		boolean actual = testLatinSquare.isLatinSquare();
+		
+		assertEquals(expectation, actual);
+		
+	}
+	
+}

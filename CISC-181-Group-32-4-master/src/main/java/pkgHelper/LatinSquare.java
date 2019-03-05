@@ -35,19 +35,47 @@ public class LatinSquare {
 		LatinSquare = puzzle;
 	}
 	
-	public boolean isLatinSquare() {
-		LatinSquare Puz = new LatinSquare();
-		// need to separate into rows and columns
-		Puz.getLatinSquare();
-		Puz.ContainsZero();
+public boolean isLatinSquare() {
+		
+		boolean isLatinSquare = true;
 		
 		
-		
-		
-		//But if it's not a LS...? must call hasDuplicates
+		//Checks rows and Columns for Duplicates
+		for (int i = 0; i < this.LatinSquare.length; i++)
+		{
+			if (hasDuplicates(getRow(i)))
+			{ 
+				isLatinSquare = false;
 			
-		return true;
+			}
+			
+			if (hasDuplicates(getColumn(i)))
+			{ 
+				isLatinSquare = false;
+			
+			}
+			
+			
+		}
+		//returns false if rows do not contain all values
+		for (int i = 1; i < LatinSquare.length; i++) {
+			
+			if(hasAllValues(getColumn(i),getRow(i)) == false)
+			{
+			isLatinSquare = false;
+		}
+			/*if(hasAllValues(getColumn(0),getColumn(i)) == false)
+			{
+			isLatinSquare = false;
+		//}*/
+		
+		
+		
+		
+		}
+		return isLatinSquare;
 	}
+	
 	
 	
 
@@ -94,7 +122,7 @@ public class LatinSquare {
 		
 			
 	}
-	public boolean ContainsZero()
+	public boolean containsZero()
 	{
 		
 	for( int i = 0; i < LatinSquare.length; i++) {

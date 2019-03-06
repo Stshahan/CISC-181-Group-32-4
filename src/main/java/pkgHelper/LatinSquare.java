@@ -16,7 +16,7 @@ public class LatinSquare {
  * getLatinSquare Complete
  * 
  * 	
- */
+ *///lalalalalalalalalalalaall
 	
 <<<<<<< HEAD
 	
